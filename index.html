@@ -55,6 +55,7 @@ textarea{background:var(--card);border:1px solid var(--ln);border-radius:10px;pa
 <div class="pn" style="grid-template-columns:1fr"><input type="text" id="n1" placeholder="Curso (ex.: Design Multimédia)"><input type="text" id="n2" placeholder="Ano (ex.: 2.º ano)"><input type="text" id="n3" placeholder="Turma (ex.: 2A)"><input type="text" id="n4" placeholder="Projeto / marca"><textarea id="n5" placeholder="Emails dos alunos do grupo (um por linha)"></textarea></div>
 <div style="display:flex;gap:8px;justify-content:flex-end;margin-top:12px"><button class="g" id="nx">Cancelar</button><button id="ns">Criar grupo</button></div></dialog>
 <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.45.4/dist/umd/supabase.js"></script>
+<script>
 const SB_URL='https://xeujypeigskqvdokatse.supabase.co',SB_KEY='sb_publishable_vW5f-VsovaHZqgAP0ZTw6w_5KHqVSrl',HD='';
 const sb=supabase.createClient(SB_URL,SB_KEY);
 const QS=[`Qual é a tarefa que o teu grupo ainda não tocou? Ataca-a hoje.`,`Se a vossa marca fosse uma pessoa, como falaria? Já está no Tom de voz?`,`Que grupo está logo atrás de vocês? Dá-lhe motivos para ficar lá.`,`Uma tarefa pequena hoje vale mais do que uma enorme na sexta.`,`O vosso logo funciona a preto e branco? Prova-o no Monocromático.`,`Quem do grupo ainda não atualizou nada hoje?`];
