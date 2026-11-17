@@ -1,0 +1,124 @@
+<!doctype html>
+<html lang="pt"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Brand Book · Painel de Tarefas</title>
+<style>
+:root{--bg:#fbfbff;--card:#fff;--tx:#1d1b2e;--mu:#7a7894;--ln:#ececf6;--c1:#7c5cff;--c2:#19d3a2;--c3:#ff7a8a;--c4:#ffc83d;--c5:#3db5ff;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media(prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#141322;--card:#1d1b30;--tx:#f1f0ff;--mu:#9c9ab8;--ln:#2d2b45}}
+html{scroll-padding-top:env(safe-area-inset-top,0px)}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--tx);font:15px/1.45 "Inter",system-ui,-apple-system,"Segoe UI",sans-serif}
+.w{max-width:980px;margin:0 auto;padding:20px 16px 60px}
+h1{font-size:26px;margin:0;letter-spacing:-.02em}h1 span{color:var(--c1)}
+.top{display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap;margin-bottom:16px}
+.sub{color:var(--mu);margin:2px 0 0}
+button,select,input{font:inherit;color:inherit}
+button{border:0;border-radius:12px;padding:9px 14px;background:var(--c1);color:#fff;font-weight:600;cursor:pointer}
+button.g{background:var(--card);color:var(--tx);border:1px solid var(--ln)}
+button.ok{background:var(--c2);color:#06382b}
+select,input[type=text],input[type=url]{background:var(--card);border:1px solid var(--ln);border-radius:10px;padding:8px 10px;width:100%}
+.card{background:var(--card);border:1px solid var(--ln);border-radius:16px;padding:14px}
+.al{border-radius:14px;padding:12px 14px;margin-bottom:10px;display:flex;gap:10px;align-items:center;justify-content:space-between;flex-wrap:wrap}
+.al.r{background:color-mix(in srgb,var(--c3) 22%,var(--card))}.al.y{background:color-mix(in srgb,var(--c4) 28%,var(--card))}.al.b{background:color-mix(in srgb,var(--c5) 20%,var(--card))}
+.fl{display:grid;grid-template-columns:repeat(auto-fit,minmax(130px,1fr));gap:8px;margin:14px 0 10px}
+.ch{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:12px}
+.chip{padding:7px 12px;border-radius:99px;background:var(--card);border:1px solid var(--ln);cursor:pointer;font-weight:600;font-size:13px}
+.chip.on{background:var(--c1);color:#fff;border-color:var(--c1)}
+.tabs{display:flex;gap:6px;overflow-x:auto;margin:6px 0 14px}
+.tab{background:transparent;color:var(--mu);border-radius:99px;padding:7px 13px;white-space:nowrap}
+.tab.on{background:var(--c5);color:#052a44}
+.sec{margin-bottom:14px}
+.sh{display:flex;justify-content:space-between;align-items:center;gap:10px;margin:18px 0 8px;font-weight:700}
+.bar{height:8px;background:var(--ln);border-radius:9px;overflow:hidden;flex:1;max-width:220px}.bar i{display:block;height:100%;background:linear-gradient(90deg,var(--c1),var(--c2))}
+.row{display:flex;gap:12px;align-items:flex-start;padding:11px 12px;border:1px solid var(--ln);background:var(--card);border-radius:14px;margin-bottom:6px;cursor:pointer}
+.row.d{border-color:color-mix(in srgb,var(--c2) 60%,var(--ln))}
+.ck{width:22px;height:22px;border-radius:7px;border:2px solid var(--ln);flex:none;display:grid;place-items:center;margin-top:1px;background:var(--bg)}
+.row.d .ck{background:var(--c2);border-color:var(--c2);color:#06382b}
+.m{flex:1;min-width:0}.m small{color:var(--mu);display:block}
+.mt{color:var(--mu);font-size:13px;margin-top:3px;overflow-wrap:anywhere}.mt a{color:var(--c1);font-weight:600}
+.bd{background:var(--c4);color:#4a3600;border-radius:99px;padding:2px 9px;font-size:12px;font-weight:700;white-space:nowrap}
+.pn{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin:10px 0 2px}.pn .f{grid-column:1/-1;display:flex;gap:8px;align-items:center}
+.pn label{font-size:12px;color:var(--mu)}
+.rk{display:flex;align-items:center;gap:12px;padding:12px;border-radius:14px;background:var(--card);border:1px solid var(--ln);margin-bottom:8px}
+.rk b.n{font-size:22px;width:34px;text-align:center}.rk.me{outline:2px solid var(--c1)}
+.lg{font-size:13px;padding:8px 4px;border-bottom:1px solid var(--ln)}.lg span{color:var(--mu)}
+.q{background:linear-gradient(120deg,var(--c1),var(--c5));color:#fff;border-radius:16px;padding:14px 16px;margin:12px 0}
+dialog{border:0;border-radius:18px;padding:18px;background:var(--card);color:var(--tx);width:min(420px,92vw)}
+dialog::backdrop{background:#0006}
+.em{color:var(--mu);text-align:center;padding:30px 10px}
+textarea{background:var(--card);border:1px solid var(--ln);border-radius:10px;padding:8px 10px;width:100%;font:inherit;color:inherit;min-height:80px}[hidden]{display:none!important}</style></head><body><div class="w">
+<div class="top"><div><h1>Brand<span>Book</span> · Tarefas</h1><p class="sub" id="hi">A carregar…</p></div><span><button id="ng" hidden>+ Novo grupo</button> <button class="g" id="so" hidden>Sair</button></span></div>
+<div id="al"></div><div id="qd"></div>
+<div class="fl"><select id="fc"></select><select id="fa"></select><select id="ft"></select></div>
+<div class="ch" id="ch"></div><div class="tabs" id="tb"></div><div id="ct"></div></div>
+<dialog id="dg"><h3 style="margin-top:0">Novo grupo</h3>
+<div class="pn" style="grid-template-columns:1fr"><input type="text" id="n1" placeholder="Curso (ex.: Design Multimédia)"><input type="text" id="n2" placeholder="Ano (ex.: 2.º ano)"><input type="text" id="n3" placeholder="Turma (ex.: 2A)"><input type="text" id="n4" placeholder="Projeto / marca"><textarea id="n5" placeholder="Emails dos alunos do grupo (um por linha)"></textarea></div>
+<div style="display:flex;gap:8px;justify-content:flex-end;margin-top:12px"><button class="g" id="nx">Cancelar</button><button id="ns">Criar grupo</button></div></dialog>
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.45.4/dist/umd/supabase.js"></script>
+<script>
+const SB_URL='COLA_AQUI_O_PROJECT_URL',SB_KEY='COLA_AQUI_A_CHAVE_PUBLISHABLE',HD='';
+const sb=supabase.createClient(SB_URL,SB_KEY);
+const QS=[`Qual é a tarefa que o teu grupo ainda não tocou? Ataca-a hoje.`,`Se a vossa marca fosse uma pessoa, como falaria? Já está no Tom de voz?`,`Que grupo está logo atrás de vocês? Dá-lhe motivos para ficar lá.`,`Uma tarefa pequena hoje vale mais do que uma enorme na sexta.`,`O vosso logo funciona a preto e branco? Prova-o no Monocromático.`,`Quem do grupo ainda não atualizou nada hoje?`];
+const $=s=>document.querySelector(s),esc=s=>String(s??'').replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+const fmt=t=>t?new Date(t).toLocaleString('pt-PT',{dateStyle:'short',timeStyle:'short'}):'—';
+let me,myName,prof=false,G={},M={},PR={},PE={},ALR=[],LAST,TK=[],L=[],sel=null,view='t',op=null,F={c:'',a:'',t:''},dirty=false,tm;
+const nm=e=>e===me?'Tu':(PE[e]||String(e||'').split('@')[0]),mem=g=>(M[g]||[]).includes(me),can=g=>mem(g)||prof;
+const dn=g=>PR[g]?.done||0,tot=g=>PR[g]?.total||0,pc=g=>tot(g)?Math.round(100*dn(g)/tot(g)):0;
+const sched=ms=>{clearTimeout(tm);tm=setTimeout(load,ms)};
+const lg=(g,t,a)=>sb.from('log').insert({group_id:g,task_title:t,user_email:me,action:a});
+const ex=async p=>{const r=await p;if(r.error)alert('Não foi possível guardar: '+r.error.message);return r};
+const vis=()=>Object.keys(G).filter(g=>(!F.c||G[g].curso===F.c)&&(!F.a||G[g].ano===F.a)&&(!F.t||G[g].turma===F.t));
+function opts(k,l,id){const v=[...new Set(Object.values(G).map(g=>g[k]))].sort();$(id).innerHTML=`<option value="">${l}: todos</option>`+v.map(x=>`<option${F[id[2]]===x?' selected':''}>${esc(x)}</option>`).join('')}
+async function load(){const[g,m,pr,pe,al,la]=await Promise.all([sb.from('groups').select('*'),sb.from('members').select('*'),sb.from('group_progress').select('*'),sb.from('people').select('*'),sb.from('tasks').select('id,group_id,title,updated_by,updated_at').contains('pending',[me]),sb.from('log').select('ts').eq('user_email',me).order('ts',{ascending:false}).limit(1)]);
+ G=Object.fromEntries((g.data||[]).map(x=>[x.id,x]));M={};(m.data||[]).forEach(x=>(M[x.group_id]=M[x.group_id]||[]).push(x.email));PR=Object.fromEntries((pr.data||[]).map(x=>[x.group_id,x]));PE=Object.fromEntries((pe.data||[]).map(x=>[x.email,x.name]));ALR=al.data||[];LAST=la.data?.[0]?.ts;
+ if(!G[sel]){const v=vis();sel=v.find(mem)||v[0]||null}
+ await loadSel();render()}
+async function loadSel(){if(!sel){TK=[];L=[];return}const[t,l]=await Promise.all([sb.from('tasks').select('*').eq('group_id',sel).order('pos').limit(1000),sb.from('log').select('*').eq('group_id',sel).order('ts',{ascending:false}).limit(200)]);TK=t.data||[];L=l.data||[]}
+function alerts(){let h='';const my=Object.keys(G).filter(mem);
+ ALR.forEach(t=>{h+=`<div class="al r"><span>🔔 <b>${esc(nm(t.updated_by))}</b> editou «${esc(t.title)}» (${fmt(t.updated_at)}). Lê, atualiza o teu lado e confirma.</span><button class="ok" data-ack="${t.id}">Li e atualizei ✓</button></div>`});
+ if(my.length){const h24=LAST?(Date.now()-new Date(LAST))/36e5:null;if(h24===null)h+=`<div class="al y"><span>🚀 Ainda não mexeste em nenhuma tarefa. O primeiro passo é o mais fácil: escolhe uma e arranca.</span></div>`;else if(h24>24)h+=`<div class="al y"><span>⏰ Já passaram <b>${Math.floor(h24)} h</b> sem ações tuas. Pelo menos uma tarefa por dia mantém o grupo vivo.</span></div>`;
+  my.forEach(g=>{const o=Object.keys(G).filter(x=>x!==g&&G[x].turma===G[g].turma&&dn(x)>dn(g)).sort((a,b)=>dn(b)-dn(a))[0];if(o)h+=`<div class="al b"><span>🏁 «${esc(G[o].projeto)}» está <b>${dn(o)-dn(g)}</b> tarefa(s) à frente de «${esc(G[g].projeto)}». Vais deixar?</span></div>`})}
+ $('#al').innerHTML=h;$('#qd').innerHTML=my.length?`<div class="q">💡 ${QS[new Date().getDate()%QS.length]}</div>`:''}
+function row(t){const c=can(t.group_id),o=op===t.id,p=(t.pending||[]).length;
+ return `<div class="row${t.done?' d':''}" data-o="${t.id}"><div class="ck" ${c?`data-ck="${t.id}"`:''}>${t.done?'✓':''}</div><div class="m"><b>${esc(t.title)}</b><small>${esc(t.crumb)}</small>${t.updated_at?`<div class="mt">👤 ${esc(nm(t.updated_by))} · 🕒 ${fmt(t.updated_at)}${t.doc_name?` · 📄 ${esc(t.doc_name)}`:''}${/^https?:\/\//.test(t.link||'')?` · <a href="${esc(t.link)}" target="_blank" rel="noopener">Abrir na Drive ↗</a>`:''}</div>`:''}
+ ${o?(c?`<div class="pn"><div><label>Nome do documento</label><input type="text" id="dn" value="${esc(t.doc_name||'')}"></div><div><label>Link da Drive</label><input type="url" id="lk" value="${esc(t.link||'')}" placeholder="https://drive.google.com/…"></div><div class="f"><button data-sv="${t.id}">Guardar e avisar o grupo</button><button class="g" data-o="${t.id}">Fechar</button>${prof?`<button class="g" data-del="${t.id}">Remover tarefa</button>`:''}</div></div>`:`<div class="mt">👀 Só podes ver este projeto.</div>`):''}</div>${p?`<span class="bd">${p} a confirmar</span>`:''}</div>`}
+const pr=p=>`<div class="bar"><i style="width:${p}%"></i></div>`;
+function vT(){return[...new Set(TK.map(t=>t.section))].map(x=>{const k=TK.filter(t=>t.section===x),d=k.filter(t=>t.done).length;return `<div class="sh"><span>${esc(x)}</span>${pr(100*d/k.length)}<span style="color:var(--mu);font-weight:500">${d}/${k.length}</span></div>`+k.map(row).join('')}).join('')||'<div class="em">Este grupo ainda não tem tarefas.</div>'}
+function grp(fn,lab){const m={};TK.filter(t=>t.updated_at).forEach(t=>{const k=fn(t);(m[k]=m[k]||[]).push(t)});const ks=Object.keys(m);return ks.length?ks.map(k=>`<div class="sh"><span>${lab(k)}</span><span style="color:var(--mu);font-weight:500">${m[k].length}</span></div>`+m[k].map(row).join('')).join(''):'<div class="em">Ainda sem registos. Cada tarefa guardada aparece aqui.</div>'}
+function vR(){return vis().sort((a,b)=>pc(b)-pc(a)||dn(b)-dn(a)).map((g,i)=>`<div class="rk${mem(g)?' me':''}"><b class="n">${['🥇','🥈','🥉'][i]||i+1}</b><div class="m"><b>${esc(G[g].projeto)}</b> <small>${esc(G[g].turma)} · ${esc(G[g].curso)} · ${esc(G[g].ano)}</small>${pr(pc(g))}<div class="mt">${dn(g)}/${tot(g)} tarefas · última ação ${fmt(PR[g]?.last_ts)}</div></div><b>${pc(g)}%</b></div>`).join('')||'<div class="em">Sem grupos neste filtro.</div>'}
+const vH=()=>L.length?L.map(l=>`<div class="lg"><span>${fmt(l.ts)}</span> · <b>${esc(nm(l.user_email))}</b> ${esc(l.action)} ${l.task_title?`«${esc(l.task_title)}»`:''}</div>`).join(''):'<div class="em">O histórico começa na primeira ação.</div>';
+function render(){const a=document.activeElement;if(a&&a.matches('input')&&a.closest('.pn')){dirty=true;return}dirty=false;
+ $('#hi').textContent=`Olá, ${myName} 👋 Cada tarefa conta. Cada dia também.`;
+ opts('curso','Curso','#fc');opts('ano','Ano','#fa');opts('turma','Turma','#ft');
+ const v=vis();$('#ch').innerHTML=v.map(g=>`<span class="chip${g===sel?' on':''}" data-g="${g}">${mem(g)?'⭐ ':''}${esc(G[g].projeto)} · ${esc(G[g].turma)}</span>`).join('')||'<span class="sub">Ainda não há grupos.</span>';
+ $('#tb').innerHTML=[['t','Por tarefa'],['u','Por utilizador'],['d','Por documento'],['r','Ranking'],['h','Histórico']].map(([k,l])=>`<button class="tab${view===k?' on':''}" data-v="${k}">${l}</button>`).join('');
+ alerts();let h='';
+ if(view==='r')h=vR();else if(!sel||!G[sel])h='<div class="em">Escolhe um grupo para ver as tarefas.</div>';else{const g=sel;
+  h=`<div class="card" style="margin-bottom:10px;display:flex;justify-content:space-between;gap:10px;align-items:center;flex-wrap:wrap"><div><b>${esc(G[g].projeto)}</b><div class="sub">${esc(G[g].curso)} · ${esc(G[g].ano)} · ${esc(G[g].turma)} · ${(M[g]||[]).map(nm).join(', ')}</div></div>${can(g)?`<span><b>${pc(g)}% feito</b> ${prof?'<button class="g" data-add>+ Tarefa</button> <button class="g" data-dg>Apagar grupo</button>':''}</span>`:'<span class="bd">Modo espetador</span>'}</div>`;
+  h+=view==='t'?vT():view==='u'?grp(t=>t.updated_by,k=>'👤 '+esc(nm(k))):view==='d'?grp(t=>t.doc_name||'Sem nome',k=>'📄 '+esc(k)):vH()}
+ $('#ct').innerHTML=h}
+document.addEventListener('click',async e=>{if(e.target.closest('.pn')&&!e.target.closest('button'))return;const q=s=>e.target.closest(s),f=id=>TK.find(t=>t.id===id);let x;
+ if(x=q('[data-ack]')){const t=ALR.find(a=>a.id===x.dataset.ack);await ex(sb.from('tasks').update({pending:[]}).eq('id',t.id));await lg(t.group_id,t.title,'confirmou a leitura de');sched(0)}
+ else if(x=q('[data-ck]')){const t=f(x.dataset.ck),d=!t.done;await ex(sb.from('tasks').update({done:d}).eq('id',t.id));await lg(t.group_id,t.title,d?'concluiu':'reabriu');sched(0)}
+ else if(x=q('[data-sv]')){const t=f(x.dataset.sv);await ex(sb.from('tasks').update({doc_name:$('#dn').value.trim(),link:$('#lk').value.trim()}).eq('id',t.id));await lg(t.group_id,t.title,'atualizou o documento de');op=null;sched(0)}
+ else if(x=q('[data-del]')){if(confirm('Remover esta tarefa só deste grupo?')){await ex(sb.from('tasks').delete().eq('id',x.dataset.del));op=null;sched(0)}}
+ else if(q('[data-add]')){const ti=prompt('Nome da nova tarefa:');if(!ti)return;const se=prompt('Secção (ex.: Identidade):',TK.at(-1)?.section||'Extra');await ex(sb.from('tasks').insert({group_id:sel,pos:(TK.at(-1)?.pos||0)+1,section:se||'Extra',crumb:se||'Extra',title:ti}));sched(0)}
+ else if(q('[data-dg]')){if(confirm('Apagar este grupo e as suas tarefas? O histórico fica arquivado.')){await ex(sb.from('groups').delete().eq('id',sel));sel=null;sched(0)}}
+ else if(x=q('[data-o]')){op=op===x.dataset.o?null:x.dataset.o;render()}
+ else if(x=q('[data-g]')){sel=x.dataset.g;op=null;await loadSel();render()}
+ else if(x=q('[data-v]')){view=x.dataset.v;op=null;render()}});
+document.addEventListener('focusout',()=>setTimeout(()=>{if(dirty)render()},150));
+['fc','fa','ft'].forEach(id=>$('#'+id).onchange=e=>{F[id[1]]=e.target.value;render()});
+$('#ng').onclick=()=>$('#dg').showModal();$('#nx').onclick=()=>$('#dg').close();$('#so').onclick=()=>sb.auth.signOut().then(()=>location.reload());
+$('#ns').onclick=async()=>{const v=[1,2,3,4].map(i=>$('#n'+i).value.trim());if(v.some(x=>!x))return alert('Preenche os quatro campos.');const em=$('#n5').value.toLowerCase().split(/[\s,;]+/).filter(x=>x.includes('@'));
+ const r=await ex(sb.from('groups').insert({curso:v[0],ano:v[1],turma:v[2],projeto:v[3]}).select().single());if(r.error)return;
+ if(em.length){await ex(sb.from('allowed_emails').upsert(em.map(email=>({email}))));await ex(sb.from('members').insert(em.map(email=>({group_id:r.data.id,email}))))}
+ await lg(r.data.id,'','criou o grupo');sel=r.data.id;$('#dg').close();sched(0)};
+(async()=>{const{data:{session}}=await sb.auth.getSession();
+ if(!session){$('#hi').textContent='Entra com a conta Google da escola para começares.';$('#ct').innerHTML='<div class="em"><button id="gl">Entrar com Google</button></div>';$('#gl').onclick=()=>sb.auth.signInWithOAuth({provider:'google',options:{redirectTo:location.origin+location.pathname,queryParams:HD?{hd:HD}:{}}});return}
+ me=session.user.email.toLowerCase();myName=session.user.user_metadata?.full_name||me;
+ if(!(await sb.rpc('is_ok')).data){$('#hi').textContent='A tua conta ainda não está autorizada. Fala com o professor.';$('#ct').innerHTML='<div class="em"><button class="g" id="so2">Sair</button></div>';$('#so2').onclick=()=>sb.auth.signOut().then(()=>location.reload());return}
+ prof=!!(await sb.rpc('is_prof')).data;await sb.from('people').upsert({email:me,name:myName});
+ $('#ng').hidden=!prof;$('#so').hidden=false;await load();
+ sb.channel('rt').on('postgres_changes',{event:'*',schema:'public'},()=>sched(400)).subscribe()})();
+</script></body></html>
